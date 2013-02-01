@@ -1,0 +1,7 @@
+﻿
+
+1.  Right now there are only .package files that can include other .package files.  But
+each a cache definition is created for .package files even when a common .package file
+will never be used by itself, and so would only be used as an one-off, single include.
+
+2. 

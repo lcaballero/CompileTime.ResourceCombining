@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<combined-assets xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <caches>
+    <cache-definition>
+      <assets>
+        <path>~/Content/Scripts/Path-1.js</path>
+        <path>~/Content/Scripts/Path-2.js</path>
+      </assets>
+      <action-path>~/Controller/Action</action-path>
+      <controller-name>Controller</controller-name>
+      <action-name>Action</action-name>
+      <hash>aslkdbjaslkjuo0-2374123l12o4</hash>
+      <raw-source>
+        <![CDATA[
+
+// Path-1.js
+
+... // code for path 1
+
+// Path-2.js
+
+... // code for path 2
+
+]]>
+      </raw-source>
+    </cache-definition>
+  </caches>
+</combined-assets>

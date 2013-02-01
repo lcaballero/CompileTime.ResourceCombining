@@ -1,0 +1,52 @@
+﻿############################################################
+# Include the site wide common stuff
+############################################################
+
+
+
+############################################################
+# Super-set of all js files required for the Advanced Chart.
+############################################################
+
+/Includes/Jslib/jQuery/jquery-1.7.1.min.js
+~/Content/Scripts/jquery-ui-1.8.18.custom.min.js
+~/Content/Scripts/jquery.hoverIntent.js
+~/Content/Scripts/json2.js
+/Includes/jslib/Serializer/serializer.3.js
+/Includes/jslib/Function/Function.1.js
+~/Content/Scripts/Forms.js
+~/Content/Scripts/UserInterface.js
+~/Content/Scripts/jquery.showdebug.js
+~/Content/Scripts/CustomSelect.js
+~/Content/Scripts/jquery.misc.ext.js
+~/Content/Scripts/jquery.navigation.ext.js
+
+~/Content/Scripts/Modules/AdvancedChart/jquery.tmpl.min.js
+~/Content/Scripts/Modules/AdvancedChart/Abstractions.js
+~/Content/Scripts/Modules/AdvancedChart/IndicatorLabels.js
+~/Content/Scripts/Modules/AdvancedChart/Overlays.js
+#~/Content/Scripts/Modules/AdvancedChart/AvailableIndicators.js
+~/Content/Scripts/Modules/AdvancedChart/Trendline.js
+~/Content/Scripts/Modules/AdvancedChart/ChartTools.js
+~/Content/Scripts/Modules/AdvancedChart/Validate.js
+~/Content/Scripts/Modules/AdvancedChart/ViewModelData.js
+~/Content/Scripts/Modules/AdvancedChart/ViewModelActions.js
+~/Content/Scripts/Modules/AdvancedChart/SignificantEvents.js
+~/Content/Scripts/Modules/AdvancedChart/ChartInit.js
+~/Content/Scripts/jquery.navigation.ext.js
+
+
+~/Content/Scripts/Modules/ActiveTraderTool.js
+
+~/Content/Scripts/jquery.SuggestionBox.js
+~/Content/Scripts/SuggestionBox.js
+~/Content/Scripts/ChangeCompany.js
+
+~/Content/Scripts/SafeConsole.js
+
+# Required for iFrame resize
+~/Content/Scripts/PostMessage.js
+
+# This is just for migration -- quick console ran functions
+~/Content/Scripts/ChartDataMigrationHelpers.js
+~/Content/Scripts/StockInternational.js
