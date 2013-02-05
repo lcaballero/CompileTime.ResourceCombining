@@ -1,7 +1,19 @@
-﻿
-
-1.  Right now there are only .package files that can include other .package files.  But
+﻿1.  Right now there are only .package files that can include other .package files.  But
 each a cache definition is created for .package files even when a common .package file
 will never be used by itself, and so would only be used as an one-off, single include.
 
-2. 
+2. Add command line interface that takes (initial pass) the following parameters:
+	--output-file					-o		location of the cache xml file
+	--input-directory				-i		directory where .js or .css .package files are stored
+	--resource-directory			-r		location where .package refereces to assets can be found
+	--js-files						-j		used instead of -i to list explicitly the .js assets (relative to resource directory).
+	--css-files						-c		used instead of -i to list explicitly the .css assets (relative to resource directory).
+	--parameter-file				-p		use parameters in this file instead of command line options
+	--minify						-m		turn on JS minification
+	--example-parameter-file		-e		create an example parameter file that can be modified and used.
+
+3. Add a process handler to the library that can then be used the web side to process
+resource/asset requests.  Also, this same library will be used to create an exe that
+can be ran as part of the build step.  
+
+4. 

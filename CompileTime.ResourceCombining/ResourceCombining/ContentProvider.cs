@@ -15,7 +15,7 @@ namespace CompileTime.ResourceCombining
 		/// a package only includes resources like .js and .css files, but other resource
 		/// files might also include other .package files.
 		/// </summary>
-		private Dictionary<string, string> Content { get; set; }
+		public Dictionary<string, string> Content { get; set; }
 
 		/// <summary>
 		/// An instance of ErrorReporting that can collect processing events

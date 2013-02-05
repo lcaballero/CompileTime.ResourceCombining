@@ -10,13 +10,15 @@ namespace CompileTimeCombining
 {
 	public class Program
 	{
-		public IPathResolver Resolver
+		public HomePathResolver Resolver
 		{
 			get
 			{
 				return
 				new HomePathResolver(
-					Path.Combine(Environment.CurrentDirectory, "../../../CompileTimeResourceCombining.Tests/Test-Files/Client/"));
+					Path.Combine(
+						Environment.CurrentDirectory,
+						@"C:\Projects\Playground\LucasCaballero\CacheHandler\CacheHandler\"));
 			}
 		}
 
@@ -34,10 +36,25 @@ namespace CompileTimeCombining
 			var cache =
 				new CombinedAssets
 				{
+					ResolvedHomePath = resolver.Home,
 					Caches = defs
 				};
 
-			File.WriteAllText("combined-resource.cache.xml", cache.ToXml());
+			File.WriteAllText(
+				@"C:\Projects\Playground\LucasCaballero\CacheHandler\CacheHandler\Content\Caches\combined-resources.cache.xml",
+				cache.ToXml());
+
+			var rc =
+				new ResourceList
+				{
+					ResolvedHomePath = resolver.Home,
+					Resources = p.ToResources()
+				};
+
+
+			File.WriteAllText(
+				@"C:\Projects\Playground\LucasCaballero\CacheHandler\CacheHandler\Content\Caches\resource-list.cache.xml",
+				rc.ToXml());
 		}
 	}
 }

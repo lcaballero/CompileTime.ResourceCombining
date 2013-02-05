@@ -60,6 +60,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,6 +68,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\CacheHandler.cs" />
+    <Compile Include="Handlers\CacheManager.cs" />
+    <Compile Include="Handlers\CacheRequest.cs" />
+    <Compile Include="Handlers\CachingOptions.cs" />
     <Compile Include="ResourceCombining\AcceptPathExtensions.cs" />
     <Compile Include="ResourceCombining\ContentProvider.cs" />
     <Compile Include="ResourceCombining\DirectorySearching.cs" />
@@ -81,7 +86,9 @@
     <Compile Include="Helpers\SetHelperExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\LucidEdge.SimpleLineParser\LucidEdge.SimpleLineParser\LucidEdge.SimpleLineParser.csproj">

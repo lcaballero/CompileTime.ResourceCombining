@@ -108,5 +108,20 @@ namespace CompileTime.ResourceCombining
 		{
 			return source.ToUtf8Bytes().ToMD5Hash();
 		}
+
+		public static List<Resource> ToResources(this PackageProcessing p)
+		{
+			return
+			p.Content.Content
+				.Select(
+					a =>
+					new Resource
+					{
+						FullRawSource = p.Content[a.Key],
+						Hash = p.Content[a.Key].Md5RawSource(),
+						Path = a.Key
+					})
+				.ToList();
+		}
 	}
 }

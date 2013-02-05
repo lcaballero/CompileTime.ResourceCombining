@@ -12,6 +12,9 @@ namespace CompileTime.ResourceCombining
 	[XmlRoot("combined-assets")]
 	public class CombinedAssets
 	{
+		[XmlElement("resolved-home-path")]
+		public string ResolvedHomePath { get; set; }
+
 		[XmlArray("caches")]
 		[XmlArrayItem("cache-definition")]
 		public List<CacheDefinition> Caches { get; set; }
@@ -28,6 +31,28 @@ namespace CompileTime.ResourceCombining
 				&& new HashSet<CacheDefinition>(Caches).IsSubsetOf(
 					new HashSet<CacheDefinition>(((CombinedAssets)obj).Caches));
 		}
+	}
+
+	[XmlRoot("resources")]
+	public class ResourceList
+	{
+		[XmlElement("resolved-home-path")]
+		public string ResolvedHomePath { get; set; }
+
+		[XmlArrayItem("asset")]
+		public List<Resource> Resources { get; set; }
+	}
+
+	public class Resource
+	{
+		[XmlElement("hash")]
+		public string Hash { get; set; }
+
+		[XmlElement("path")]
+		public string Path { get; set; }
+
+		[XmlElement("raw-source")]
+		public Source FullRawSource { get; set; }
 	}
 
 	public class Source
